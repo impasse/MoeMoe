@@ -4,9 +4,9 @@ include _partial/_post/tags
 prepend head
     title= `${post.title} | ${site.title}`
     if post.style
-        link(rel='stylesheet', href=post.style)
+        link(rel='stylesheet', href=url_for(post.url, post.style))
     if post.script
-        script(src=post.script)
+        script(src=url_for(post.url, post.script))
 
 block rightside
       #page(class=post.class)

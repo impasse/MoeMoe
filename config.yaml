@@ -29,8 +29,8 @@ twitter: https://twitter.com/shyling6
 ga: UA-96993727-1
 
 links:
-  link: '/links'
-  about: '/about'
+  link: '/links/'
+  about: '/about/'
 
 marked:
   gfm: true
