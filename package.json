@@ -24,7 +24,6 @@
     "prismjs": "^1.6.0",
     "probe-image-size": "^3.0.0",
     "pug": "^2.0.0-rc.2",
-    "sharp": "^0.18.1",
     "stylus": "^0.54.5",
     "superstatic": "^4.1.0"
   },
