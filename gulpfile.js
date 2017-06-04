@@ -33,3 +33,5 @@ gulp.task('watch:stylus', function(cb) {
 gulp.task('watch', ['watch:stylus', 'watch:page'], function() {
     console.info('start watch');
 });
+
+gulp.task('build', ['build:stylus', 'build:page']);
