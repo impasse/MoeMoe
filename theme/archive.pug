@@ -1,0 +1,26 @@
+extends _layout
+
+prepend head
+    title= `Archive | ${site.title}`
+
+block rightside
+    div#archives
+        div
+            -
+                var data = _.reduce(posts, function(a, b) {
+                    var year = b.date.year();
+                    if(a[year]) {
+                        a[year].push(b);
+                    } else {
+                        a[year] = [b];
+                    }
+                    return a;
+                }, {});
+            each year in _.chain(data).keys().sortBy().reverse().value()
+                section.archive-year
+                    h2= year
+                    ul.archive-posts
+                        each post in data[year]
+                            li.archive-post
+                                a(href=post.url)= post.title
+        include _partial/paginator

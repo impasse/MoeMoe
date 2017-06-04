@@ -1,0 +1,42 @@
+url: https://shyling.com
+root: /
+title: Ling's Blog
+subTitle: Have a little but hard dream
+description: Have a little but hard dream
+keywords:
+  - shyling
+  - blog
+  - personal
+  - javascript
+author: shyling
+email: i@shyling.com
+
+
+pageSize: 10
+timezone: Asia/Shanghai
+dateformat: YYYY/MM/DD
+convertToDataURI: true
+
+logo_small: //q.qlogo.cn/qqapp/100229475/2229ECE6C6AA666326E6E67A8B541781/40
+logo: //q.qlogo.cn/qqapp/100229475/2229ECE6C6AA666326E6E67A8B541781/240
+
+github: https://github.com/lingmm
+
+disqus: shyling
+
+twitter: https://twitter.com/shyling6
+
+ga: UA-96993727-1
+
+links:
+  link: '/links'
+  about: '/about'
+
+marked:
+  gfm: true
+  tables: true
+  breaks: false
+  pedantic: false
+  sanitize: true
+  smartLists: true
+  smartypants: false

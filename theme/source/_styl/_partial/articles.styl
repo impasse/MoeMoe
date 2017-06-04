@@ -1,0 +1,33 @@
+#articles
+  padding-left 10px
+  article
+    padding 20px
+    border-bottom 1px solid $border-color
+    .article__title
+      margin 10px 0
+      & > a
+        color $main-color
+      & > a:hover
+        border-bottom 1px solid $main-color
+    .article__content
+      color inherit
+      font-size 14px
+    .article__info
+      color #bbb
+      font-size 12px
+      margin 20px 0
+      display flex
+      align-items center
+      & > span
+        margin-right 30px
+      & ul
+        margin 0
+        padding 0
+        display inline-block
+        vertical-align bottom
+        li
+          float left
+          list-style-type none
+          margin-right 10px
+  &:last-child
+    border-bottom: 0

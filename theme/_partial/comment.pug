@@ -1,0 +1,31 @@
+.comment
+    if site.disqus && post.comments !== false
+        #disqus_thread
+        script.
+            var disqus_config = function() {
+                this.page.url = '#{site.url}#{post.url}';
+                this.page.identifier = '#{post.path}';
+                this.callbacks.onReady.push(function() {
+                    $('.comment iframe').show();
+                });
+            };
+            (function() {
+                $(window).scroll(function (e) {
+                    if($(document).height() - $(window).height() - $(document).scrollTop() < 20) {
+                        if(!window.DISQUS) {
+                            var ele = document.createElement('script');
+                            ele.src = 'https://#{site.disqus}.disqus.com/embed.js';
+                            ele.setAttribute('data-timestamp', +new Date());
+                            ele.addEventListener('error', function(err) { $('#disqus_thread').text('加载失败: ' + err.message)});
+                            $('head').append(ele);
+                        } else {
+                            DISQUS.reset({
+                                reload: true,
+                                config: disqus_config
+                            });
+                        }
+                        $(this).off(e);
+                    }
+                }).trigger('scroll');
+            })();
+            

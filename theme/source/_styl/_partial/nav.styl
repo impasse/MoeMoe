@@ -1,0 +1,29 @@
+nav
+  background white
+  user-select none
+  border-bottom 1px solid $border-color
+  padding 0 1rem
+  position fixed
+  width 100%
+  & + *
+    padding-top $nav-height
+  ul
+    display flex
+    padding 0
+    margin 0
+    li
+      color $main-color
+      font-size 12px
+      display block
+      list-style-type none
+      height $nav-height
+      line-height $nav-height
+      margin 0 16px
+      &.active
+        border-bottom 2px solid black
+      &:hover
+        opacity .5
+      a
+        text-transform uppercase
+        display block
+        height auto

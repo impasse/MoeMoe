@@ -1,0 +1,15 @@
+extends _layout
+include _partial/_post/tags
+
+prepend head
+    title= `${post.title} | ${site.title}`
+    if post.style
+        link(rel='stylesheet', href=post.style)
+    if post.script
+        script(src=post.script)
+
+block rightside
+      #page(class=post.class)
+        div.page-content
+          != post.content
+        include _partial/comment

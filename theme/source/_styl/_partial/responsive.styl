@@ -1,0 +1,33 @@
+@media screen and (min-width: 750px)
+  #sidebar
+    animation slideToLeft 1s
+
+@media screen and (max-width: 750px)
+  body
+    height initial
+    flex-direction column
+  .toggle-btn
+    display: none
+  #sidebar
+    height initial
+    width auto
+    position static
+    margin-left 0 !important
+    padding-top 100px
+    #site_description
+      margin 1em 0
+    #copyright
+      display none
+  main
+    margin-left 0
+    nav
+      position fixed
+      backdrop-filter blur(2px)
+      top 0
+      padding 0 10px
+    #articles
+      padding-left 0
+    #post
+      margin 0 0
+      #disqus_thread
+        margin-right 0

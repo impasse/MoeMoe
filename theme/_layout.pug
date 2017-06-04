@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(name='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        link(rel='shortcut icon', href=url_for('/favicon.ico'), type="image/png")
+        link(rel='icon', href=url_for('/favicon.ico'), type="image/png")
+        script(src=url_for('/js/turbolinks.js'))
+        block head
+            meta(itemprop='image' content=url_for('/favicon.ico'))
+            link(rel='stylesheet', href=url_for('/css/app.css'))
+            script(src=url_for('/js/jquery-3.2.1.min.js'))
+            include _partial/scripts.pug
+    body
+        block body
+            include _partial/sidebar
+            main
+                include _partial/nav
+                block rightside
+            .toggle-btn
+                i.fa.fa-chevron-left(aria-hidden="true")

@@ -1,0 +1,10 @@
+nav
+    ul
+        - var archive = 'archive';
+        li(class=is_home() ? 'active':'')
+            a(href=site.root) Home
+        li(class=is_archive() ? 'active' : '')
+            a(href=url_for(archive))= titlecase(archive)
+        each title in Object.keys(site.links)
+            li(class=is_current(title) ? 'active' : '')
+                a(href=url_for(site.links[title]))= titlecase(title)

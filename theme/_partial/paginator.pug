@@ -1,0 +1,10 @@
+.paginator
+    if has_prev
+        a.extend.prev(rel='next', href=url_for(prev_link)) 上一页
+    each page_number in page_numbers
+        if page_number.current
+            span.page_number.current= page_number.number
+        else
+            a.page-number(href=url_for(page_number.link))= page_number.number
+    if has_next
+        a.extend.next(rel='next', href=url_for(next_link)) 下一页

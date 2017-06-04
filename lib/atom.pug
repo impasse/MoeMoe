@@ -1,0 +1,26 @@
+doctype xml
+feed(xmlns='http://www.w3.org/2005/Atom')
+    title= site.title
+    if site.subTitle
+        subtitle= site.subTitle
+    link(href=encodeURI(`${site.url}${site.root}atom.xml`), ref='self')
+    link(href=encodeURI(site.url))
+    updated= _.get(posts, '[0].date', new Date).toISOString()
+    id= site.url
+    author
+        name= site.author
+        if site.email
+            email= site.email
+    generator(uri='https://github.com/lingmm/moemoe/') MoeMoe
+    each post in posts
+        entry
+            title= post.title
+            link= encodeURI(`${site.url}${post.url}`)
+            id= `${site.url}${post.url}`
+            published= post.date.toISOString()
+            updated= post.date.toISOString()
+            content(type='html').
+                <![CDATA[#{post.content}]]>
+            summary(type='html')= post.excerpt
+            each tag in post.tags
+                category(term=tag.name, scheme=encodeURI(`${site.url}${tag.url}`))

@@ -1,0 +1,21 @@
+#sidebar
+    a#logo(href=site.root)
+        img(src=site.logo_small, alt="logo")
+    div#site_name
+        a(href=site.root)= site.title
+    div.fat
+        #site_description= site.description
+        #socials
+            a(href=site.github, title="GitHub")
+                i.fa.fa-github(aria-hidden="true")
+            if site.twitter
+                a(href=site.twitter, title="Twitter")
+                    i.fa.fa-twitter(aria-hidden="true")
+            a(href='/atom.xml', title="Feed")
+                i.fa.fa-rss(aria-hidden="true")
+            a(href="#")
+                i.fa.fa-transgender(aria-hidden="true")
+    #copyright
+        p.
+            Power by #[a(href="https://github.com/lingmm/moemoe") MoeMoe]
+        p #[a(href="http://www.miitbeian.gov.cn/", rel="nofollow", target="_blank") 豫ICP备15030578号-1] | #[a(href="https://creativecommons.org/licenses/by-nc-sa/4.0/", rel="nofollow", target="_blank") CC BY-NC-SA 4.0]

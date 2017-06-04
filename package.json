@@ -1,0 +1,38 @@
+{
+  "name": "moemoe",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node lib/index.js",
+    "dev": "lite-server --baseDir=public",
+    "start": "NODE_ENV=production && superstatic public --port 80 --host 0.0.0.0 --gzip"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "cheerio": "^1.0.0-rc.1",
+    "datauri": "^1.0.5",
+    "fs-extra": "^3.0.1",
+    "fs-magic": "^2.0.0",
+    "fs-readdir-promise": "^1.0.1",
+    "js-yaml": "^3.8.4",
+    "lodash": "^4.17.4",
+    "marked": "^0.3.6",
+    "moment-timezone": "^0.5.13",
+    "nodejieba": "^2.2.5",
+    "prismjs": "^1.6.0",
+    "probe-image-size": "^3.0.0",
+    "pug": "^2.0.0-rc.2",
+    "pygmentize-bundled": "^2.3.0",
+    "sharp": "^0.18.1",
+    "stylus": "^0.54.5",
+    "superstatic": "^4.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-stylus": "^2.6.0",
+    "lite-server": "^2.3.0"
+  }
+}

@@ -1,0 +1,5 @@
+mixin tags(tags)
+    .tags
+        i.fa.fa-tags(aria-hidden="true")
+        each tag in tags
+            a(href=tag.url)= tag.name

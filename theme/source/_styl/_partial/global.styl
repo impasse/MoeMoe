@@ -1,0 +1,74 @@
+a,a:active,a:visited
+  text-decoration none
+  color $link-color
+  transition opacity .5s ease-in
+  &:hover
+    opacity .5
+i.fa
+  margin-right 10px
+.tags
+  i, a
+    color #bbb
+    margin-right 10px
+
+html, body
+  margin 0
+  border 0
+  height 100%
+  color rgba(0, 0, 0, .5)
+body
+  display: flex
+  flex-flow row
+  font-size 15px
+  font-family 'source-han-sans-simplified-c', 'PingFang SC', 'Hiragino Sans GB', 'PingHei', 'Open Sans', sans-serif, Helvetica Neue, 'Work Sans', 'Microsoft YaHei', SimSun
+  -webkit-font-smoothing antialiased
+  animation slowShow 1s cubic-bezier(0, 0, 0.2, 1)
+
+.paginator
+  margin 40px 0
+  text-align center
+  position relative
+  a, span
+    user-select none
+    display inline-block
+    padding: 8px 12px;
+    margin: 0 10px;
+    border-radius: 999em;
+    border 1px solid $border-color
+  a:hover
+      border 1px solid $main-color
+  .prev
+    position absolute
+    left 10px
+  .next
+    position absolute
+    right 10px
+
+.markdown-body
+  p > code
+    color #f06292
+  & > pre
+    white-space inherit
+
+.comment
+  padding 0 2em
+
+.toggle-btn
+    cursor col-resize
+    position fixed
+    padding 0 3px
+    top 50%
+    left 38%
+    &:hover
+      transform scale(1.2)
+
+.comment iframe
+    display none
+
+@keyframes slowShow
+  0%
+    transform translateY(-5px)
+    opacity 0
+@keyframes slideToLeft
+  0%
+    transform translate3d(100px, 0, 0)

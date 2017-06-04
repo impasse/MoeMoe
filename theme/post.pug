@@ -1,0 +1,21 @@
+extends _layout
+include _partial/_post/tags
+
+prepend head
+    - var title = `${post.title} | ${site.title}`
+    title= title
+    meta(itemprop='name', content=title)
+    meta(name='description',itemprop='description', content=post.excerpt.replace(/<.+?>/g, ''))
+    meta(name='keywords', content=post.keywords.join(','))
+
+block rightside
+    #post
+        h1= post.title
+        article
+            .article-date
+                i.fa.fa-calendar(aria-hidden="true")
+                = format_date(post.date)
+            .article-content.markdown-body
+                != post.content
+            +tags(post.tags)
+        include _partial/comment
