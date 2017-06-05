@@ -4,6 +4,7 @@ s: links
 page: true
 class: links
 style: style.css
+script: script.js
 ---
 - [261days](https://www.261day.com)
 - [蔓舞寻樱的博客](https://emiria.io)
