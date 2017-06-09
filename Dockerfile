@@ -4,7 +4,7 @@ WORKDIR /srv
 
 COPY package.json .
 
-RUN npm i --regsitry=https://regsitry.npm.taobao.org
+RUN npm i
 
 COPY . .
 
